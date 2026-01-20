@@ -1,0 +1,270 @@
+using System.Drawing;
+
+namespace SklepProjektC.Forms
+{
+    partial class BrandForm
+    {
+        private System.ComponentModel.IContainer components = null;
+        private DataGridView dataGridViewBrands;
+        private Panel topPanel;
+        private Label titleLabel;
+        private TableLayoutPanel tableLayoutPanel;
+        private Label labelNazwa;
+        private TextBox textBoxNazwa;
+        private Label labelOpis;
+        private TextBox textBoxOpis;
+        private FlowLayoutPanel buttonPanel;
+        private Button buttonAdd;
+        private Button buttonUpdate;
+        private Button buttonDelete;
+        private Button buttonRefresh;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            dataGridViewBrands = new DataGridView();
+            topPanel = new Panel();
+            titleLabel = new Label();
+            tableLayoutPanel = new TableLayoutPanel();
+            labelNazwa = new Label();
+            textBoxNazwa = new TextBox();
+            labelOpis = new Label();
+            textBoxOpis = new TextBox();
+            buttonPanel = new FlowLayoutPanel();
+            buttonAdd = new Button();
+            buttonUpdate = new Button();
+            buttonDelete = new Button();
+            buttonRefresh = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewBrands).BeginInit();
+            topPanel.SuspendLayout();
+            tableLayoutPanel.SuspendLayout();
+            buttonPanel.SuspendLayout();
+            SuspendLayout();
+            // 
+            // dataGridViewBrands
+            // 
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(240, 240, 240);
+            dataGridViewBrands.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewBrands.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridViewBrands.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewBrands.BackgroundColor = Color.White;
+            dataGridViewBrands.BorderStyle = BorderStyle.None;
+            dataGridViewBrands.Location = new Point(20, 80);
+            dataGridViewBrands.Name = "dataGridViewBrands";
+            dataGridViewBrands.Size = new Size(760, 300);
+            dataGridViewBrands.TabIndex = 2;
+            dataGridViewBrands.SelectionChanged += dataGridViewBrands_SelectionChanged;
+            // 
+            // topPanel
+            // 
+            topPanel.BackColor = Color.FromArgb(33, 150, 243);
+            topPanel.Controls.Add(titleLabel);
+            topPanel.Dock = DockStyle.Top;
+            topPanel.Location = new Point(0, 0);
+            topPanel.Name = "topPanel";
+            topPanel.Size = new Size(800, 60);
+            topPanel.TabIndex = 3;
+            // 
+            // titleLabel
+            // 
+            titleLabel.AutoSize = true;
+            titleLabel.Font = new Font("Bahnschrift", 16F, FontStyle.Bold);
+            titleLabel.ForeColor = Color.White;
+            titleLabel.Location = new Point(20, 15);
+            titleLabel.Name = "titleLabel";
+            titleLabel.Size = new Size(226, 27);
+            titleLabel.TabIndex = 0;
+            titleLabel.Text = "Zarz¹dzanie Markami";
+            // 
+            // tableLayoutPanel
+            // 
+            tableLayoutPanel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel.ColumnCount = 2;
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel.Controls.Add(labelNazwa, 0, 0);
+            tableLayoutPanel.Controls.Add(textBoxNazwa, 1, 0);
+            tableLayoutPanel.Controls.Add(labelOpis, 0, 1);
+            tableLayoutPanel.Controls.Add(textBoxOpis, 1, 1);
+            tableLayoutPanel.Location = new Point(20, 400);
+            tableLayoutPanel.Name = "tableLayoutPanel";
+            tableLayoutPanel.Padding = new Padding(5);
+            tableLayoutPanel.RowCount = 2;
+            tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel.Size = new Size(760, 80);
+            tableLayoutPanel.TabIndex = 1;
+            // 
+            // labelNazwa
+            // 
+            labelNazwa.Dock = DockStyle.Fill;
+            labelNazwa.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            labelNazwa.Location = new Point(8, 5);
+            labelNazwa.Name = "labelNazwa";
+            labelNazwa.Size = new Size(114, 40);
+            labelNazwa.TabIndex = 0;
+            labelNazwa.Text = "Nazwa:";
+            labelNazwa.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // textBoxNazwa
+            // 
+            textBoxNazwa.Dock = DockStyle.Fill;
+            textBoxNazwa.Font = new Font("Segoe UI", 10F);
+            textBoxNazwa.Location = new Point(130, 13);
+            textBoxNazwa.Margin = new Padding(5, 8, 5, 8);
+            textBoxNazwa.Name = "textBoxNazwa";
+            textBoxNazwa.Size = new Size(620, 25);
+            textBoxNazwa.TabIndex = 1;
+            // 
+            // labelOpis
+            // 
+            labelOpis.Dock = DockStyle.Fill;
+            labelOpis.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            labelOpis.Location = new Point(8, 45);
+            labelOpis.Name = "labelOpis";
+            labelOpis.Size = new Size(114, 40);
+            labelOpis.TabIndex = 2;
+            labelOpis.Text = "Opis:";
+            labelOpis.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // textBoxOpis
+            // 
+            textBoxOpis.Dock = DockStyle.Fill;
+            textBoxOpis.Font = new Font("Segoe UI", 10F);
+            textBoxOpis.Location = new Point(130, 53);
+            textBoxOpis.Margin = new Padding(5, 8, 5, 8);
+            textBoxOpis.Name = "textBoxOpis";
+            textBoxOpis.Size = new Size(620, 25);
+            textBoxOpis.TabIndex = 3;
+            // 
+            // buttonPanel
+            // 
+            buttonPanel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            buttonPanel.Controls.Add(buttonAdd);
+            buttonPanel.Controls.Add(buttonUpdate);
+            buttonPanel.Controls.Add(buttonDelete);
+            buttonPanel.Controls.Add(buttonRefresh);
+            buttonPanel.Location = new Point(20, 490);
+            buttonPanel.Name = "buttonPanel";
+            buttonPanel.Size = new Size(760, 50);
+            buttonPanel.TabIndex = 0;
+            // 
+            // buttonAdd
+            // 
+            buttonAdd.BackColor = Color.FromArgb(76, 175, 80);
+            buttonAdd.Cursor = Cursors.Hand;
+            buttonAdd.FlatAppearance.BorderSize = 0;
+            buttonAdd.FlatStyle = FlatStyle.Flat;
+            buttonAdd.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            buttonAdd.ForeColor = Color.White;
+            buttonAdd.Location = new Point(5, 5);
+            buttonAdd.Margin = new Padding(5);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(110, 40);
+            buttonAdd.TabIndex = 0;
+            buttonAdd.Text = "Dodaj";
+            buttonAdd.UseVisualStyleBackColor = false;
+            buttonAdd.Click += buttonAdd_Click;
+            // 
+            // buttonUpdate
+            // 
+            buttonUpdate.BackColor = Color.FromArgb(33, 150, 243);
+            buttonUpdate.Cursor = Cursors.Hand;
+            buttonUpdate.FlatAppearance.BorderSize = 0;
+            buttonUpdate.FlatStyle = FlatStyle.Flat;
+            buttonUpdate.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            buttonUpdate.ForeColor = Color.White;
+            buttonUpdate.Location = new Point(125, 5);
+            buttonUpdate.Margin = new Padding(5);
+            buttonUpdate.Name = "buttonUpdate";
+            buttonUpdate.Size = new Size(110, 40);
+            buttonUpdate.TabIndex = 1;
+            buttonUpdate.Text = "Aktualizuj";
+            buttonUpdate.UseVisualStyleBackColor = false;
+            buttonUpdate.Click += buttonUpdate_Click;
+            // 
+            // buttonDelete
+            // 
+            buttonDelete.BackColor = Color.FromArgb(244, 67, 54);
+            buttonDelete.Cursor = Cursors.Hand;
+            buttonDelete.FlatAppearance.BorderSize = 0;
+            buttonDelete.FlatStyle = FlatStyle.Flat;
+            buttonDelete.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            buttonDelete.ForeColor = Color.White;
+            buttonDelete.Location = new Point(245, 5);
+            buttonDelete.Margin = new Padding(5);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(110, 40);
+            buttonDelete.TabIndex = 2;
+            buttonDelete.Text = "Usun";
+            buttonDelete.UseVisualStyleBackColor = false;
+            buttonDelete.Click += buttonDelete_Click;
+            // 
+            // buttonRefresh
+            // 
+            buttonRefresh.BackColor = Color.FromArgb(158, 158, 158);
+            buttonRefresh.Cursor = Cursors.Hand;
+            buttonRefresh.FlatAppearance.BorderSize = 0;
+            buttonRefresh.FlatStyle = FlatStyle.Flat;
+            buttonRefresh.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            buttonRefresh.ForeColor = Color.White;
+            buttonRefresh.Location = new Point(365, 5);
+            buttonRefresh.Margin = new Padding(5);
+            buttonRefresh.Name = "buttonRefresh";
+            buttonRefresh.Size = new Size(110, 40);
+            buttonRefresh.TabIndex = 3;
+            buttonRefresh.Text = "Odswiez";
+            buttonRefresh.UseVisualStyleBackColor = false;
+            buttonRefresh.Click += buttonRefresh_Click;
+            // 
+            // BrandForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(250, 250, 250);
+            ClientSize = new Size(800, 600);
+            Controls.Add(buttonPanel);
+            Controls.Add(tableLayoutPanel);
+            Controls.Add(dataGridViewBrands);
+            Controls.Add(topPanel);
+            Font = new Font("Segoe UI", 9F);
+            MinimumSize = new Size(800, 600);
+            Name = "BrandForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Marki";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewBrands).EndInit();
+            topPanel.ResumeLayout(false);
+            topPanel.PerformLayout();
+            tableLayoutPanel.ResumeLayout(false);
+            tableLayoutPanel.PerformLayout();
+            buttonPanel.ResumeLayout(false);
+            ResumeLayout(false);
+        }
+
+        private Button CreateStyledButton(string text, Color color)
+        {
+            var btn = new Button
+            {
+                Text = text,
+                FlatStyle = FlatStyle.Flat,
+                BackColor = color,
+                ForeColor = Color.White,
+                Size = new Size(110, 40),
+                Font = new Font("Segoe UI", 10F, FontStyle.Bold),
+                Margin = new Padding(5),
+                Cursor = Cursors.Hand
+            };
+            btn.FlatAppearance.BorderSize = 0;
+            return btn;
+        }
+    }
+}
