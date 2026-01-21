@@ -13,12 +13,15 @@ namespace SklepProjektC
         {
             InitializeComponent();
             InitializeMenuIcons();
+            
+            // SprawdŸ czy po³¹czenie ju¿ istnieje
+            isConnected = DatabaseHelper.IsConnected();
+            btnConnect.ForeColor = isConnected ? Color.FromArgb(94, 212, 59) : Color.White;
             UpdateMenuButtonsState();
             
             btnConnect.FlatAppearance.BorderColor = Color.FromArgb(33, 150, 243);
             btnConnect.FlatAppearance.BorderSize = 0;
             
-            // Ustawia kolor t³a obszaru roboczego
             foreach (Control control in this.Controls)
             {
                 if (control is MdiClient mdiClient)
@@ -85,30 +88,37 @@ namespace SklepProjektC
         // £¹czy z baz¹ danych
         private void ConnectItem_Click(object sender, EventArgs e)
         {
-            try
+            // SprawdŸ czy okno logowania ju¿ nie jest otwarte
+            foreach (Form childForm in this.MdiChildren)
             {
-                if (DatabaseHelper.TestConnection())
+                if (childForm is LoginForm)
+                {
+                    childForm.Activate();
+                    return;
+                }
+            }
+
+            // Otwórz LoginForm jako okno MDI
+            var loginForm = new LoginForm
+            {
+                MdiParent = this,
+                WindowState = FormWindowState.Maximized
+            };
+            
+            // Obs³uga zdarzenia po pomyœlnym zalogowaniu
+            loginForm.FormClosed += (s, args) =>
+            {
+                if (loginForm.LoginSuccessful)
                 {
                     isConnected = true;
                     btnConnect.ForeColor = Color.FromArgb(94, 212, 59);
                     UpdateMenuButtonsState();
-                    MessageBox.Show("Po³¹czenie z baz¹ danych zosta³o nawi¹zane pomyœlnie!", "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Po³¹czenie z baz¹ danych zosta³o nawi¹zane pomyœlnie!", 
+                        "Sukces", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else
-                {
-                    isConnected = false;
-                    btnConnect.ForeColor = Color.White;
-                    UpdateMenuButtonsState();
-                    MessageBox.Show("Nie uda³o siê po³¹czyæ z baz¹ danych!", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                isConnected = false;
-                btnConnect.ForeColor = Color.White;
-                UpdateMenuButtonsState();
-                MessageBox.Show($"B³¹d: {ex.Message}", "B³¹d", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            };
+            
+            loginForm.Show();
         }
 
         // Roz³¹cza z baz¹ danych
@@ -117,6 +127,7 @@ namespace SklepProjektC
             try
             {
                 CloseAllMdiChildren();
+                DatabaseHelper.ClearConnection();
                 isConnected = false;
                 btnConnect.ForeColor = Color.White;
                 UpdateMenuButtonsState();

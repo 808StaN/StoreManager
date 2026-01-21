@@ -5,12 +5,24 @@ namespace SklepProjektC.DataAccess
 {
     public static class DatabaseHelper
     {
-        // Connection string do bazy Azure
-        private static readonly string connectionString = "Server=polska.database.windows.net;Database=72420_Sklep Internetowy - odzie¿ + obuwie;User Id=CloudSA48b973ec;Password=!@#QWE456rty;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        // Connection string bêdzie ustawiany dynamicznie po zalogowaniu
+        private static string connectionString = string.Empty;
+
+        // Ustawia connection string po pomyœlnym zalogowaniu
+        public static void SetConnectionString(string server, string database, string userId, string password)
+        {
+            connectionString = $"Server={server};Database={database};" +
+                             $"User Id={userId};Password={password};" +
+                             $"Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        }
 
         // Zwraca nowe po³¹czenie do bazy
         public static SqlConnection GetConnection()
         {
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new InvalidOperationException("Brak po³¹czenia z baz¹ danych. Najpierw zaloguj siê.");
+            }
             return new SqlConnection(connectionString);
         }
 
@@ -29,6 +41,18 @@ namespace SklepProjektC.DataAccess
             {
                 return false;
             }
+        }
+
+        // Sprawdza czy connection string jest ustawiony
+        public static bool IsConnected()
+        {
+            return !string.IsNullOrEmpty(connectionString);
+        }
+
+        // Czyœci connection string (wylogowanie)
+        public static void ClearConnection()
+        {
+            connectionString = string.Empty;
         }
     }
 }
