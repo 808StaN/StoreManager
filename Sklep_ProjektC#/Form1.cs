@@ -47,6 +47,7 @@ namespace SklepProjektC
                 SetButtonIcon(btnBrands, Path.Combine(imgPath, "registeredTrademark.png"), "Marki", iconSize);
                 SetButtonIcon(btnUsers, Path.Combine(imgPath, "users.png"), "U¿ytkownicy", iconSize);
                 SetButtonIcon(btnOrders, Path.Combine(imgPath, "shoppingBasket.png"), "Zamówienia", iconSize);
+                SetButtonIcon(btnReturns, Path.Combine(imgPath, "return.png"), "Zwroty", iconSize);
                 SetButtonIcon(btnDisconnect, Path.Combine(imgPath, "disconect.png"), "Roz³¹cz z Baz¹", iconSize);
             }
             catch (Exception ex)
@@ -158,6 +159,7 @@ namespace SklepProjektC
             btnBrands.Enabled = isConnected;
             btnUsers.Enabled = isConnected;
             btnOrders.Enabled = isConnected;
+            btnReturns.Enabled = isConnected;
             btnDisconnect.Enabled = isConnected;
         }
 
@@ -189,6 +191,11 @@ namespace SklepProjektC
         private void OrderItem_Click(object sender, EventArgs e)
         {
             OpenOrActivateForm<OrderForm>();
+        }
+
+        private void ReturnItem_Click(object sender, EventArgs e)
+        {
+            OpenOrActivateForm<ReturnForm>();
         }
 
         private void Form1_Load(object sender, EventArgs e)

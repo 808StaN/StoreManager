@@ -1,12 +1,9 @@
-ï»¿using System.Drawing;
+using System.Drawing;
 
 namespace SklepProjektC
 {
     partial class Form1
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Panel titlePanel;
@@ -19,12 +16,9 @@ namespace SklepProjektC
         private System.Windows.Forms.Button btnBrands;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnOrders;
+        private System.Windows.Forms.Button btnReturns;
         private System.Windows.Forms.Button btnDisconnect;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -34,12 +28,6 @@ namespace SklepProjektC
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             sidePanel = new Panel();
@@ -51,6 +39,7 @@ namespace SklepProjektC
             btnBrands = new Button();
             btnUsers = new Button();
             btnOrders = new Button();
+            btnReturns = new Button();
             btnDisconnect = new Button();
             titlePanel = new Panel();
             titleLabel = new Label();
@@ -58,9 +47,8 @@ namespace SklepProjektC
             flowLayoutPanel.SuspendLayout();
             titlePanel.SuspendLayout();
             SuspendLayout();
-            // 
+
             // sidePanel
-            // 
             sidePanel.BackColor = Color.FromArgb(33, 150, 243);
             sidePanel.Controls.Add(flowLayoutPanel);
             sidePanel.Controls.Add(titlePanel);
@@ -69,9 +57,8 @@ namespace SklepProjektC
             sidePanel.Name = "sidePanel";
             sidePanel.Size = new Size(280, 800);
             sidePanel.TabIndex = 0;
-            // 
+
             // flowLayoutPanel
-            // 
             flowLayoutPanel.AutoScroll = true;
             flowLayoutPanel.BackColor = Color.FromArgb(33, 150, 243);
             flowLayoutPanel.Controls.Add(btnConnect);
@@ -81,6 +68,7 @@ namespace SklepProjektC
             flowLayoutPanel.Controls.Add(btnBrands);
             flowLayoutPanel.Controls.Add(btnUsers);
             flowLayoutPanel.Controls.Add(btnOrders);
+            flowLayoutPanel.Controls.Add(btnReturns);
             flowLayoutPanel.Controls.Add(btnDisconnect);
             flowLayoutPanel.Dock = DockStyle.Fill;
             flowLayoutPanel.FlowDirection = FlowDirection.TopDown;
@@ -90,9 +78,8 @@ namespace SklepProjektC
             flowLayoutPanel.Size = new Size(280, 680);
             flowLayoutPanel.TabIndex = 1;
             flowLayoutPanel.WrapContents = false;
-            // 
+
             // btnConnect
-            // 
             btnConnect.BackColor = Color.FromArgb(33, 150, 243);
             btnConnect.Cursor = Cursors.Hand;
             btnConnect.FlatAppearance.BorderSize = 0;
@@ -107,13 +94,12 @@ namespace SklepProjektC
             btnConnect.Padding = new Padding(20, 0, 0, 0);
             btnConnect.Size = new Size(260, 50);
             btnConnect.TabIndex = 0;
-            btnConnect.Text = "  PoÅ‚Ä…cz z BazÄ…";
+            btnConnect.Text = "  Po³¹cz z Baz¹";
             btnConnect.TextAlign = ContentAlignment.MiddleLeft;
             btnConnect.UseVisualStyleBackColor = false;
             btnConnect.Click += ConnectItem_Click;
-            // 
+
             // btnWarehouse
-            // 
             btnWarehouse.BackColor = Color.FromArgb(33, 150, 243);
             btnWarehouse.Cursor = Cursors.Hand;
             btnWarehouse.FlatAppearance.BorderSize = 0;
@@ -132,9 +118,8 @@ namespace SklepProjektC
             btnWarehouse.TextAlign = ContentAlignment.MiddleLeft;
             btnWarehouse.UseVisualStyleBackColor = false;
             btnWarehouse.Click += WarehouseItem_Click;
-            // 
+
             // btnProducts
-            // 
             btnProducts.BackColor = Color.FromArgb(33, 150, 243);
             btnProducts.Cursor = Cursors.Hand;
             btnProducts.FlatAppearance.BorderSize = 0;
@@ -153,9 +138,8 @@ namespace SklepProjektC
             btnProducts.TextAlign = ContentAlignment.MiddleLeft;
             btnProducts.UseVisualStyleBackColor = false;
             btnProducts.Click += ProductItem_Click;
-            // 
+
             // btnCategories
-            // 
             btnCategories.BackColor = Color.FromArgb(33, 150, 243);
             btnCategories.Cursor = Cursors.Hand;
             btnCategories.FlatAppearance.BorderSize = 0;
@@ -174,9 +158,8 @@ namespace SklepProjektC
             btnCategories.TextAlign = ContentAlignment.MiddleLeft;
             btnCategories.UseVisualStyleBackColor = false;
             btnCategories.Click += CategoryItem_Click;
-            // 
+
             // btnBrands
-            // 
             btnBrands.BackColor = Color.FromArgb(33, 150, 243);
             btnBrands.Cursor = Cursors.Hand;
             btnBrands.FlatAppearance.BorderSize = 0;
@@ -195,9 +178,8 @@ namespace SklepProjektC
             btnBrands.TextAlign = ContentAlignment.MiddleLeft;
             btnBrands.UseVisualStyleBackColor = false;
             btnBrands.Click += BrandItem_Click;
-            // 
+
             // btnUsers
-            // 
             btnUsers.BackColor = Color.FromArgb(33, 150, 243);
             btnUsers.Cursor = Cursors.Hand;
             btnUsers.FlatAppearance.BorderSize = 0;
@@ -212,13 +194,12 @@ namespace SklepProjektC
             btnUsers.Padding = new Padding(20, 0, 0, 0);
             btnUsers.Size = new Size(260, 50);
             btnUsers.TabIndex = 5;
-            btnUsers.Text = "  UÅ¼ytkownicy";
+            btnUsers.Text = "  U¿ytkownicy";
             btnUsers.TextAlign = ContentAlignment.MiddleLeft;
             btnUsers.UseVisualStyleBackColor = false;
             btnUsers.Click += UserItem_Click;
-            // 
+
             // btnOrders
-            // 
             btnOrders.BackColor = Color.FromArgb(33, 150, 243);
             btnOrders.Cursor = Cursors.Hand;
             btnOrders.FlatAppearance.BorderSize = 0;
@@ -233,13 +214,32 @@ namespace SklepProjektC
             btnOrders.Padding = new Padding(20, 0, 0, 0);
             btnOrders.Size = new Size(260, 50);
             btnOrders.TabIndex = 6;
-            btnOrders.Text = "  ZamÃ³wienia";
+            btnOrders.Text = "  Zamówienia";
             btnOrders.TextAlign = ContentAlignment.MiddleLeft;
             btnOrders.UseVisualStyleBackColor = false;
             btnOrders.Click += OrderItem_Click;
-            // 
+
+            // btnReturns
+            btnReturns.BackColor = Color.FromArgb(33, 150, 243);
+            btnReturns.Cursor = Cursors.Hand;
+            btnReturns.FlatAppearance.BorderSize = 0;
+            btnReturns.FlatAppearance.MouseDownBackColor = Color.FromArgb(21, 101, 192);
+            btnReturns.FlatAppearance.MouseOverBackColor = Color.FromArgb(25, 118, 210);
+            btnReturns.FlatStyle = FlatStyle.Flat;
+            btnReturns.Font = new Font("Bahnschrift", 11F);
+            btnReturns.ForeColor = Color.White;
+            btnReturns.Location = new Point(10, 445);
+            btnReturns.Margin = new Padding(0, 5, 0, 5);
+            btnReturns.Name = "btnReturns";
+            btnReturns.Padding = new Padding(20, 0, 0, 0);
+            btnReturns.Size = new Size(260, 50);
+            btnReturns.TabIndex = 7;
+            btnReturns.Text = "  Zwroty";
+            btnReturns.TextAlign = ContentAlignment.MiddleLeft;
+            btnReturns.UseVisualStyleBackColor = false;
+            btnReturns.Click += ReturnItem_Click;
+
             // btnDisconnect
-            // 
             btnDisconnect.BackColor = Color.FromArgb(33, 150, 243);
             btnDisconnect.Cursor = Cursors.Hand;
             btnDisconnect.FlatAppearance.BorderSize = 0;
@@ -248,19 +248,18 @@ namespace SklepProjektC
             btnDisconnect.FlatStyle = FlatStyle.Flat;
             btnDisconnect.Font = new Font("Bahnschrift", 11F);
             btnDisconnect.ForeColor = Color.White;
-            btnDisconnect.Location = new Point(10, 445);
+            btnDisconnect.Location = new Point(10, 505);
             btnDisconnect.Margin = new Padding(0, 5, 0, 5);
             btnDisconnect.Name = "btnDisconnect";
             btnDisconnect.Padding = new Padding(20, 0, 0, 0);
             btnDisconnect.Size = new Size(260, 50);
-            btnDisconnect.TabIndex = 7;
-            btnDisconnect.Text = "  RozÅ‚Ä…cz z BazÄ…";
+            btnDisconnect.TabIndex = 8;
+            btnDisconnect.Text = "  Roz³¹cz z Baz¹";
             btnDisconnect.TextAlign = ContentAlignment.MiddleLeft;
             btnDisconnect.UseVisualStyleBackColor = false;
             btnDisconnect.Click += DisconnectItem_Click;
-            // 
+
             // titlePanel
-            // 
             titlePanel.BackColor = Color.FromArgb(25, 118, 210);
             titlePanel.Controls.Add(titleLabel);
             titlePanel.Dock = DockStyle.Top;
@@ -269,9 +268,8 @@ namespace SklepProjektC
             titlePanel.Padding = new Padding(20);
             titlePanel.Size = new Size(280, 120);
             titlePanel.TabIndex = 0;
-            // 
+
             // titleLabel
-            // 
             titleLabel.Dock = DockStyle.Fill;
             titleLabel.Font = new Font("Bahnschrift SemiBold", 20F, FontStyle.Bold);
             titleLabel.ForeColor = Color.White;
@@ -279,30 +277,26 @@ namespace SklepProjektC
             titleLabel.Name = "titleLabel";
             titleLabel.Size = new Size(240, 80);
             titleLabel.TabIndex = 0;
-            titleLabel.Text = "MENEDÅ»ER SKLEPU";
+            titleLabel.Text = "MENED¯ER SKLEPU";
             titleLabel.TextAlign = ContentAlignment.MiddleLeft;
-            // 
+
             // Form1
-            // 
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(70, 130, 179); // #4682B3
+            BackColor = Color.FromArgb(70, 130, 179);
             ClientSize = new Size(1200, 800);
             Controls.Add(sidePanel);
             Font = new Font("Segoe UI", 9F);
             IsMdiContainer = true;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MenedÅ¼er Sklepu";
+            Text = "Mened¿er Sklepu";
             WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             sidePanel.ResumeLayout(false);
             flowLayoutPanel.ResumeLayout(false);
             titlePanel.ResumeLayout(false);
             ResumeLayout(false);
-
         }
-
-        #endregion
     }
 }
