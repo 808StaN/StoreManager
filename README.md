@@ -1,6 +1,6 @@
 # StoreManager
 
-Desktop application for managing an online clothing and footwear store.
+Desktop application for managing an online clothing and footwear store. It centralizes daily operations in one place, including products, categories, brands, warehouse variants, users, orders, and returns. The goal is to provide a clear and practical CRUD workflow for store staff through a simple MDI interface connected to SQL Server / Azure SQL.
 
 ## Overview
 
