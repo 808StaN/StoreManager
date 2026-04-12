@@ -36,7 +36,7 @@ The app uses an MDI layout (left navigation + module windows in the workspace ar
 
 ## Screenshots
 
-### 1) Main app - Products module
+### 1) Main app - Login page
 ![StoreManager - Main](./docs/screenshots/StoreManager_main.png)
 
 ### 2) Main app - Managing data
@@ -46,11 +46,11 @@ The app uses an MDI layout (left navigation + module windows in the workspace ar
 
 ```text
 Sklep_ProjektC#/
-?? Models/          # Domain/data models
-?? DataAccess/      # Repositories + DatabaseHelper
-?? Forms/           # WinForms modules
-?? Img/             # Menu icons
-?? Program.cs       # App entry point
+- Models/           # Domain/data models
+- DataAccess/       # Repositories + DatabaseHelper
+- Forms/            # WinForms modules
+- Img/              # Menu icons
+- Program.cs        # App entry point
 ```
 
 ## Getting Started
@@ -65,11 +65,6 @@ Sklep_ProjektC#/
 2. Build the solution.
 3. Start the app.
 4. Click **"Po³¹cz z Baz¹"** and log in using database credentials.
-
-## Notes
-
-- The app no longer stores DB password in source code.
-- Credentials are provided via the login form at runtime.
 
 ## License
 
