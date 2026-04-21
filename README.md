@@ -1,6 +1,6 @@
 # StoreManager
 
-Desktop application for managing an online clothing and footwear store.
+Desktop application for managing an online clothing and footwear store. It centralizes daily operations in one place, including products, categories, brands, warehouse variants, users, orders, and returns. The goal is to provide a clear and practical CRUD workflow for store staff through a simple MDI interface connected to SQL Server / Azure SQL.
 
 ## Overview
 
@@ -36,21 +36,21 @@ The app uses an MDI layout (left navigation + module windows in the workspace ar
 
 ## Screenshots
 
-### 1) Main app - Products module
-![StoreManager - Products](./docs/screenshots/menedzer-sklepu-produkty-1.png)
+### 1) Main app - Login page
+![StoreManager - Main](./docs/screenshots/StoreManager_main.png)
 
-### 2) Main app - Products module (second screenshot)
-![StoreManager - Products (2)](./docs/screenshots/menedzer-sklepu-produkty-2.png)
+### 2) Main app - Managing data
+![StoreManager - Managing Data](./docs/screenshots/StoreManager_managingData.png)
 
 ## Project Structure
 
 ```text
 Sklep_ProjektC#/
-?? Models/          # Domain/data models
-?? DataAccess/      # Repositories + DatabaseHelper
-?? Forms/           # WinForms modules
-?? Img/             # Menu icons
-?? Program.cs       # App entry point
+- Models/           # Domain/data models
+- DataAccess/       # Repositories + DatabaseHelper
+- Forms/            # WinForms modules
+- Img/              # Menu icons
+- Program.cs        # App entry point
 ```
 
 ## Getting Started
@@ -65,11 +65,6 @@ Sklep_ProjektC#/
 2. Build the solution.
 3. Start the app.
 4. Click **"Po³¹cz z Baz¹"** and log in using database credentials.
-
-## Notes
-
-- The app no longer stores DB password in source code.
-- Credentials are provided via the login form at runtime.
 
 ## License
 
